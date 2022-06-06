@@ -73,6 +73,8 @@ class SparkBLE {
     const service = await this.device.gatt.getPrimaryService('0000ffc0-0000-1000-8000-00805f9b34fb');
     const characteristic = await service.getCharacteristic('0000ffc1-0000-1000-8000-00805f9b34fb');
     await characteristic.writeValueWithoutResponse(data);
+    // await characteristic.writeValue(data);
+    // await characteristic.writeValueWithResponse(data);
   }
 
   disconnect() {
